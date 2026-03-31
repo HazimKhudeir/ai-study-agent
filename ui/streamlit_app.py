@@ -1,10 +1,8 @@
-"""
-Compatibility shim: the canonical Streamlit app lives in ``app.py``.
+import sys
+import os
 
-Use::
-
-    streamlit run app.py
-"""
+# خلي Python يشوف الفولدر الرئيسي
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from app import main as run
 
